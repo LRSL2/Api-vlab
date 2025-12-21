@@ -45,8 +45,12 @@ venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 pip install -r requirements-dev.txt  # Para desenvolvimento
 
-# Copiar variáveis de ambiente
-cp .env.example .env
+# Configurar variáveis de ambiente
+adicione:
+"DATABASE_URL=postgresql+asyncpg://vlab:vlab@localhost:5432/vlab_db
+API_KEY=vlab-secret-key
+LOG_LEVEL=INFO"
+ao final do arquivo activate do venv
 
 # Rodar migrations
 alembic upgrade head
