@@ -200,4 +200,4 @@ make docker-down   # Parar Docker
 make clean         # Limpar cache
 ```
 # Cobertura dos testes:
-!https://github.com/LRSL2/Api-vlab/blob/36baca43496c645c2bb7045786d709a05f510880/coverage_Api-vlab.png
+<img src="https://github.com/LRSL2/Api-vlab/blob/36baca43496c645c2bb7045786d709a05f510880/coverage_Api-vlab.png" alt="" width="300px" />
