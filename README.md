@@ -13,28 +13,6 @@ API desenvolvida para o desafio técnico V-Lab, focada em ingestão e consulta d
 - **Docker** - Containerização
 - **Pytest** - Testes automatizados
 
-## 📋 Funcionalidades Implementadas
-
-### Requisitos Obrigatórios
-- ✅ API REST com FastAPI
-- ✅ Validação de CPF
-- ✅ Detecção de anomalias (preço 25% acima da média)
-- ✅ Paginação com filtros
-- ✅ Consulta por CPF do motorista
-- ✅ Migrations com Alembic
-- ✅ Testes automatizados
-- ✅ Health check
-- ✅ Autenticação via API Key
-- ✅ Linters (Black, isort, Ruff)
-
-### Diferenciais
-- ✅ Logging estruturado
-- ✅ Paginação com total count
-- ✅ Índices otimizados no banco
-- ✅ Docker Compose completo
-- ✅ Type hints em todo código
-- ✅ Documentação automática (Swagger/OpenAPI)
-
 ## 🏗️ Arquitetura
 
 ```
@@ -50,17 +28,11 @@ app/
 ```
 
 ## 🔧 Instalação
-
-### Pré-requisitos
-- Python 3.11+
-- Docker e Docker Compose
-- Make (opcional, mas recomendado)
-
 ### Setup Local
 
 ```bash
 # Clonar repositório
-git clone <repo-url>
+git clone https://github.com/LRSL2/Api-vlab.git
 cd Api-vlab
 
 # Criar e ativar ambiente virtual
@@ -75,30 +47,20 @@ pip install -r requirements-dev.txt  # Para desenvolvimento
 
 # Copiar variáveis de ambiente
 cp .env.example .env
-# Editar .env com suas configurações
 
 # Rodar migrations
 alembic upgrade head
 
 # Iniciar aplicação
-uvicorn app.main:app --reload
-```
-
-### Setup com Docker
-
-```bash
-# Subir todos os serviços (PostgreSQL + Redis + API)
 docker-compose up --build
 
-# API disponível em http://localhost:8000
-# Documentação em http://localhost:8000/docs
+# API disponível em http://localhost:8000/docs
 ```
 
 ## 📚 Documentação da API
 
 Acesse a documentação interativa:
 - Swagger UI: http://localhost:8000/docs
-- ReDoc: http://localhost:8000/redoc
 
 ### Endpoints Principais
 
@@ -233,22 +195,3 @@ make docker-up     # Subir Docker
 make docker-down   # Parar Docker
 make clean         # Limpar cache
 ```
-
-## 📈 Próximos Passos / Melhorias Futuras
-
-- [ ] Implementar cache com Redis
-- [ ] Adicionar rate limiting
-- [ ] Métricas com Prometheus
-- [ ] Dashboard com Grafana
-- [ ] CI/CD com GitHub Actions
-- [ ] Testes de carga com Locust
-- [ ] Documentação adicional
-
-## 👤 Autor
-
-Desenvolvido como parte do desafio técnico V-Lab.
-
-## 📄 Licença
-
-Este projeto é parte de um desafio técnico.
-
