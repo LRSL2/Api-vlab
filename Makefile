@@ -31,7 +31,7 @@ lint:
 
 test:
 	@echo "Running tests..."
-	DATABASE_URL="sqlite+aiosqlite:///./test.db" ./.venv/bin/python -m pytest app/test/ -v
+	DATABASE_URL="sqlite+aiosqlite:///./test.db" ./venv/bin/python -m pytest app/test/ -v
 
 clean:
 	@echo "Cleaning cache files..."
