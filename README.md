@@ -35,15 +35,8 @@ app/
 git clone https://github.com/LRSL2/Api-vlab.git
 cd Api-vlab
 
-# Criar e ativar ambiente virtual
-python3.11 -m venv venv
-source venv/bin/activate  # Linux/Mac
-# ou
-venv\Scripts\activate     # Windows
-
-# Instalar dependências
-pip install -r requirements.txt
-pip install -r requirements-dev.txt  # Para desenvolvimento
+# Criar ambiente virtual
+python3 -m venv venv
 
 # Configurar variáveis de ambiente
 adicione:
@@ -51,6 +44,15 @@ adicione:
 API_KEY=vlab-secret-key
 LOG_LEVEL=INFO"
 ao final do arquivo activate do venv
+
+# Ativar ambiente virtual
+source venv/bin/activate  # Linux/Mac
+# ou
+venv\Scripts\activate     # Windows
+
+# Instalar dependências
+pip install -r requirements.txt
+pip install -r requirements-dev.txt  # Para desenvolvimento
 
 # Rodar migrations
 alembic upgrade head
